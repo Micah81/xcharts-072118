@@ -9,6 +9,11 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  node: {
+  fs: "empty",
+  net: "empty",
+  tls: "empty"
+},
   module: {
     rules: [
       // Take all sass files, compile them, and bundle them in with our js bundle

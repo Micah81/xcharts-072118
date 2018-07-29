@@ -61,6 +61,17 @@ module.exports = {
       },
     ],
   },
+  "node": {
+  "fs": "empty",
+  "global": true,
+  "crypto": "empty",
+  "tls": "empty",
+  "net": "empty",
+  "process": true,
+  "module": false,
+  "clearImmediate": false,
+  "setImmediate": false
+},
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

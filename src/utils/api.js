@@ -2,7 +2,7 @@ var axios = require('axios');
 var key = require('./apiKey')
 
 var latestQuotes = [];
-function getOpenPrice (period) {
+function getQuotes (period) {
   latestQuotes.push({
                      'open':   parseFloat(period['1. open']),
                      'high':   parseFloat(period['2. high']),
@@ -22,7 +22,7 @@ module.exports = {
           var hash = response.data['Time Series (Daily)']
           var keys = Object.keys(hash)
           keys.forEach((key, i)=>{
-            getOpenPrice((hash[key]))
+            getQuotes((hash[key]))
 
           })
           //console.log(latestQuotes)
